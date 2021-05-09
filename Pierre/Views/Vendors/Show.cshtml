@@ -1,0 +1,16 @@
+@using Pierre.Models;
+
+<p>@Model["vendor"].Name :</p>
+<p>@Model["vendor"].Description</p>
+<p>Here are all the orders for this vendor:<p>
+
+<ol>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Name</a></li>
+  }
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add more orders</a></p>
+<p><a href='/vendors'>Back to Vendors list</a></p>
+<p><a href='/'>Back to Home Page</a></p>

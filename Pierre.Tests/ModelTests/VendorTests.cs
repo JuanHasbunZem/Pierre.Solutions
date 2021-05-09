@@ -70,7 +70,7 @@ namespace Pierre.Tests
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
       string description = "Sells Pies";
-      Order newOrder = new Order(description);
+      Order newOrder = new Order("Pies", description, 15, "01/02/2021");
       List<Order> newList = new List<Order> { newOrder };
       string name = "Trader";
       Vendor newVendor = new Vendor(name, description);
